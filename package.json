@@ -2,8 +2,13 @@
     "name": "lobaocare-backend",
     "version": "1.0.0",
     "main": "index.js",
+    "engines": {
+        "node": "20.14.0"
+    },
     "scripts": {
-        "dev": "tsx watch src/http/server.ts"
+        "dev": "tsx watch src/http/server.ts",
+        "build": "tsup src",
+        "start": "node dist/http/server.js"
     },
     "keywords": [],
     "author": "",

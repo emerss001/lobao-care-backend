@@ -17,6 +17,9 @@ app.register(getProductsRoute);
 app.register(createConsultationsRoute);
 app.register(getTimesRoute);
 
-app.listen({ port: 3636 }).then(() => {
+app.listen({
+    host: "0.0.0.0",
+    port: process.env.PORT ? Number(process.env.PORT) : 3636,
+}).then(() => {
     console.log("HTTP server running");
 });
